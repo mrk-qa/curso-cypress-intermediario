@@ -7,8 +7,8 @@ on:
   push:
   
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  call-workflow:
+    uses: curso-cypress-intermediario-tat/.github/workflows/docker-run.yml@v1
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3

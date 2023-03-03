@@ -7,10 +7,24 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Set up Docker
+      - name: Set up Docker
         uses: crazy-max/ghaction-setup-docker@v1
         with:
           version: 23.0.1
-          shell: sh
-          run: docker version
+        
+        name: wlsf82/gitlab-ce
+        with:
+          command: docker run --publish 80:80 --name gitlab --hostname localhost wlsf82/gitlab-ce
+
+jobs:
+  Cypress-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitCode
+        uses: actions/checkout@v2
+ 
+      - name: Run Cypress Test
+        uses: cypress-io/github-action@v4
+        with:
+          command: npx cypress run
+          browser: chrome

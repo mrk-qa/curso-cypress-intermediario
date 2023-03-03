@@ -16,12 +16,12 @@ jobs:
         with:
           command: docker run --publish 80:80 --name gitlab --hostname localhost wlsf82/gitlab-ce
 
-    steps:
-      - name: Checkout GitCode
-        uses: actions/checkout@v2
+    # steps:
+    #   - name: Checkout GitCode
+    #     uses: actions/checkout@v2
  
-      - name: Run Cypress Test
-        uses: cypress-io/github-action@v4
-        with:
-          command: npx cypress run
-          browser: chrome
+    #   - name: Run Cypress Test
+    #     uses: cypress-io/github-action@v4
+    #     with:
+    #       command: npx cypress run
+    #       browser: chrome

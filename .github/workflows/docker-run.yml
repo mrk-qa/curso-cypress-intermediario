@@ -13,9 +13,13 @@ jobs:
           version: 23.0.1
           # shell: sh
           # run: docker run --publish 80:80 --name gitlab --hostname localhost wlsf82/gitlab-ce
+  
+  install-node:
+    uses: mrk-qa/curso-cypress-intermediario-tat/actions/workflows/cypress.yml
+    needs: docker
 
-jobs:
-  call-workflow:
+# jobs:
+#   call-workflow:
     # steps:
     #   - uses: actions/checkout@v3
     #   - uses: actions/setup-node@v3

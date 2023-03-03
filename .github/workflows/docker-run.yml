@@ -15,7 +15,7 @@ jobs:
           # run: docker run --publish 80:80 --name gitlab --hostname localhost wlsf82/gitlab-ce
   
   install-node:
-    uses: mrk-qa/curso-cypress-intermediario-tat/.github/workflows/cypress.yml
+    uses: mrk-qa/curso-cypress-intermediario-tat/.github/workflows/cypress.yml@v1
     needs: docker
 
 # jobs:

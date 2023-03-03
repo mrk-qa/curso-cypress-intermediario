@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Starter Docker Test
+        uses: cubetiq/starter-docker-actions@main
+        with:
+          shell: sh
+          run: docker version

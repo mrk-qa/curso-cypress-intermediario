@@ -14,11 +14,11 @@ jobs:
           # shell: sh
           # run: docker run --publish 80:80 --name gitlab --hostname localhost wlsf82/gitlab-ce
 
-  node:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout GitCode
-        uses: actions/checkout@v2
+  # node:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout GitCode
+  #       uses: actions/checkout@v2
  
     #   - name: Run Cypress Test
     #     uses: cypress-io/github-action@v4

@@ -12,7 +12,7 @@ jobs:
         with:
           version: 23.0.1
         
-        name: wlsf82/gitlab-ce
+        name: Docker Run Local
         with:
           command: docker run --publish 80:80 --name gitlab --hostname localhost wlsf82/gitlab-ce
 

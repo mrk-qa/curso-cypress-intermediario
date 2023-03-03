@@ -15,7 +15,7 @@ jobs:
           # run: docker run --publish 80:80 --name gitlab --hostname localhost wlsf82/gitlab-ce
   
   install-node:
-    uses: ./.github/workflows/cypress.yml@v1
+    uses: ./.github/workflows/cypress.yml@v2
     needs: docker
 
 # jobs:

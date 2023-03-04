@@ -11,6 +11,10 @@ jobs:
         uses: crazy-max/ghaction-setup-docker@v1
         with:
           version: 23.0.1
+  
+  docker-local:
+    runs-on: ubuntu-latest
+    steps:
       - name: Run Docker
           run: docker run --publish 80:80 --name gitlab --hostname localhost wlsf82/gitlab-ce
   

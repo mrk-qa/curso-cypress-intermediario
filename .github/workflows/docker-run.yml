@@ -16,9 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Docker
-          with:
-            shell: sh
-            run: docker run --publish 80:80 --name gitlab --hostname localhost wlsf82/gitlab-ce
+          run: docker run --publish 80:80 --name gitlab --hostname localhost wlsf82/gitlab-ce
   
   install-node:
     runs-on: ubuntu-latest

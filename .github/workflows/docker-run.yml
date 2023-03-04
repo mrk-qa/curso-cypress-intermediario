@@ -12,8 +12,6 @@ jobs:
         with:
           version: 23.0.1
       - name: Run Docker
-        with:
-          shell: sh
           run: docker run --publish 80:80 --name gitlab --hostname localhost wlsf82/gitlab-ce
   
   install-node:
